@@ -33,6 +33,7 @@ export const initialNodes = [
     {
         id: "II-215N",
         style: { backgroundColor: '#4ba360' },
+        type: 'output',
         data: { "label": "Cálculo Diferencial e Integral I (Colegiado)" },
         position
     },
@@ -45,6 +46,7 @@ export const initialNodes = [
     {
         id: "SC-203",
         style: { backgroundColor: '#4ba360' },
+        type: 'output',
         data: { "label": "Fundamentos de Sistemas Operativos (Laboratorio)" },
         position
     },
@@ -57,12 +59,14 @@ export const initialNodes = [
     {
         id: "SC-205",
         style: { backgroundColor: '#4ba360' },
+        type: 'output',
         data: { "label": "Electrónica Digital y Microprocesadores" },
         position
     },
     {
         id: "EM-220",
         style: { backgroundColor: '#4ba360' },
+        type: 'output',
         data: { "label": "Álgebra Lineal (Colegiado)" },
         position
     },
@@ -99,7 +103,9 @@ export const initialNodes = [
     },
     {
         id: "SC-402",
-        data: { "label": "Fundamentos de Encrutamiento y Computación (Laboratorio)" },
+        style: { backgroundColor: '#4ba360' },
+        type: 'output',
+        data: { "label": "Fundamentos de Enrutamiento y Computación (Laboratorio)" },
         position
     },
     {
@@ -114,21 +120,26 @@ export const initialNodes = [
     },
     {
         id: "SC-405",
+        style: { backgroundColor: '#4ba360' },
         data: { "label": "Calidad del Software" },
         position
     },
     {
         id: "II-204",
+        style: { backgroundColor: '#4ba360' },
+        type: 'output',
         data: { "label": "Probabilidad y Estadística Descriptiva" },
         position
     },
     {
         id: "SC-502",
+        type: 'output',
         data: { "label": "Ambiente Web Cliente/Servidor (Laboratorio)" },
         position
     },
     {
         id: "SC-503",
+        type: 'output',
         data: { "label": "Administración de Base de Datos (Laboratorio)" },
         position
     },
@@ -139,6 +150,7 @@ export const initialNodes = [
     },
     {
         id: "SC-505",
+        style: { backgroundColor: '#4ba360' },
         data: { "label": "Administración de Proyecto" },
         position
     },
@@ -149,22 +161,26 @@ export const initialNodes = [
     },
     {
         id: "SC-602",
+        type: 'output',
         data: { "label": "Data Warehouse y Base de Datos Multidimensionales (Laboratorio)" },
         position
     },
     {
         id: "SC-603",
+        style: { backgroundColor: '#4ba360' },
         data: { "label": "Análisis y Modelado de Requerimientos" },
         position
     },
     {
         id: "SC-604",
+        style: { backgroundColor: '#4ba360' },
         data: { "label": "Gobernanza y Gestión de Tecnologías de Información y Comunicaciones" },
         position
     },
     {
         id: "E1",
-        type: "input",
+        type: 'output',
+        style: { backgroundColor: '#4ba360' },
         data: { "label": "Electiva 1" },
         position
     },
@@ -190,28 +206,33 @@ export const initialNodes = [
     },
     {
         id: "E2",
-        type: "input",
+        type: 'output',
+        style: { backgroundColor: '#4ba360' },
         data: { "label": "Electiva 2" },
         position
     },
     {
         id: "SC-250",
+        type: 'output',
         data: { "label": "Paradigmas de Programación" },
         position
     },
     {
         id: "SC-270",
+        type: 'output',
         data: { "label": "Computación y Sociedad" },
         position
     },
     {
         id: "SC-803",
+        type: 'output',
         data: { "label": "Implantación de Sistemas" },
         position
     },
     {
         id: "E3",
-        type: "input",
+        type: 'output',
+        style: { backgroundColor: '#4ba360' },
         data: { "label": "Electiva 3" },
         position
     }
@@ -231,11 +252,11 @@ export const initialEdges = [
     { id: '11', source: 'SC-204', target: 'SC-402', type: edgeType, animated: true },
     { id: '12', source: 'SC-303', target: 'SC-403', type: edgeType, animated: true },
     { id: '13', source: 'SC-304', target: 'SC-404', type: edgeType, animated: true },
-    { id: '14', source: 'SC-302', target: 'SC-405', type: edgeType, animated: true },
-    { id: '15', source: 'II-115', target: 'II-204', type: edgeType, animated: true },
-    { id: '16', source: 'SC-305', target: 'SC-502', type: edgeType, animated: true },
-    { id: '17', source: 'SC-403', target: 'SC-502', type: edgeType, animated: true },
-    { id: '18', source: 'SC-404', target: 'SC-503', type: edgeType, animated: true },
+    { id: '14', source: 'SC-404', target: 'SC-503', type: edgeType, animated: true },
+    { id: '15', source: 'SC-302', target: 'SC-405', type: edgeType, animated: true },
+    { id: '16', source: 'II-115', target: 'II-204', type: edgeType, animated: true },
+    { id: '17', source: 'SC-305', target: 'SC-502', type: edgeType, animated: true },
+    { id: '18', source: 'SC-403', target: 'SC-502', type: edgeType, animated: true },
     { id: '19', source: 'SC-404', target: 'SC-504', type: edgeType, animated: true },
     { id: '20', source: 'AN-100', target: 'SC-505', type: edgeType, animated: true },
     { id: '21', source: 'SC-405', target: 'SC-505', type: edgeType, animated: true },

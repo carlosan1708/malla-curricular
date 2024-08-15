@@ -2,7 +2,6 @@ import { useCallback } from 'react';
 import {
   ReactFlow,
   addEdge,
-  ConnectionLineType,
   Panel,
   useNodesState,
   useEdgesState,
@@ -32,25 +31,42 @@ const getLayoutedElements = (nodes, edges, direction = 'LR') => {
 
   dagre.layout(dagreGraph);
 
+  // Group nodes by their x coordinate to identify nodes in the same column
+  const columns = {};
+  nodes.forEach((node) => {
+    const position = dagreGraph.node(node.id);
+    const x = position.x;
+
+    if (!columns[x]) {
+      columns[x] = [];
+    }
+    columns[x].push(node.id);
+  });
+
+  const columnSpacing = 5; // The amount of horizontal offset
   const newNodes = nodes.map((node) => {
-    const nodeWithPosition = dagreGraph.node(node.id);
-    const newNode = {
+    const position = dagreGraph.node(node.id);
+    const x = position.x;
+    const y = position.y;
+
+    // If multiple nodes share the same x coordinate, apply an offset
+    const offsetIndex = columns[x].indexOf(node.id);
+    const xOffset = columnSpacing * offsetIndex;
+
+    return {
       ...node,
       targetPosition: isHorizontal ? 'left' : 'top',
       sourcePosition: isHorizontal ? 'right' : 'bottom',
-      // We are shifting the dagre node position (anchor=center center) to the top left
-      // so it matches the React Flow node anchor point (top left).
       position: {
-        x: nodeWithPosition.x - nodeWidth / 2,
-        y: nodeWithPosition.y - nodeHeight / 2,
+        x: x - nodeWidth / 2 + xOffset,
+        y: y - nodeHeight / 2,
       },
     };
-
-    return newNode;
   });
 
   return { nodes: newNodes, edges };
 };
+
 
 const { nodes: layoutedNodes, edges: layoutedEdges } = getLayoutedElements(
   initialNodes,
