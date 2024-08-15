@@ -5,95 +5,95 @@ export const initialNodes = [
     {
         id: "II-115",
         type: "input",
-        style: { backgroundColor: 'green' },
+        style: { backgroundColor: '#4ba360' },
         data: { "label": "Introducción al Cálculo o Matemática Básica (Colegiado)" },
         position
     },
     {
         id: "SC-115",
         type: "input",
-        style: { backgroundColor: 'green' },
+        style: { backgroundColor: '#4ba360' },
         data: { "label": "Programación Básica (Introducción a la Programación)" },
         position
     },
     {
         id: "SC-103",
         type: "input",
-        style: { backgroundColor: 'green' },
+        style: { backgroundColor: '#4ba360' },
         data: { "label": "Introducción a la Informática" },
         position
     },
     {
         id: "SC-315",
         type: "input",
-        style: { backgroundColor: 'green' },
+        style: { backgroundColor: '#4ba360' },
         data: { "label": "Matemáticas Discretas (Colegiado)" },
         position
     },
     {
         id: "II-215N",
-        style: { backgroundColor: 'green' },
+        style: { backgroundColor: '#4ba360' },
         data: { "label": "Cálculo Diferencial e Integral I (Colegiado)" },
         position
     },
     {
         id: "SC-202",
-        style: { backgroundColor: 'green' },
+        style: { backgroundColor: '#4ba360' },
         data: { "label": "Introducción a la Programación (Laboratorio)" },
         position
     },
     {
         id: "SC-203",
-        style: { backgroundColor: 'green' },
+        style: { backgroundColor: '#4ba360' },
         data: { "label": "Fundamentos de Sistemas Operativos (Laboratorio)" },
         position
     },
     {
         id: "SC-204",
-        style: { backgroundColor: 'green' },
+        style: { backgroundColor: '#4ba360' },
         data: { "label": "Principios de Redes y Comunicaciones (Laboratorio)" },
         position
     },
     {
         id: "SC-205",
-        style: { backgroundColor: 'green' },
+        style: { backgroundColor: '#4ba360' },
         data: { "label": "Electrónica Digital y Microprocesadores" },
         position
     },
     {
         id: "EM-220",
-        style: { backgroundColor: 'green' },
+        style: { backgroundColor: '#4ba360' },
         data: { "label": "Álgebra Lineal (Colegiado)" },
         position
     },
     {
         id: "SC-302",
-        style: { backgroundColor: 'green' },
+        style: { backgroundColor: '#4ba360' },
         data: { "label": "Documentación de Software" },
         position
     },
     {
         id: "SC-303",
-        style: { backgroundColor: 'green' },
+        style: { backgroundColor: '#4ba360' },
         data: { "label": "Programación Cliente/Servidor Concurrente (Laboratorio)" },
         position
     },
     {
         id: "SC-304",
-        style: { backgroundColor: 'green' },
+        style: { backgroundColor: '#4ba360' },
         data: { "label": "Estructura de Datos (Laboratorio)" },
         position
     },
     {
         id: "SC-305",
-        style: { backgroundColor: 'green' },
+        style: { backgroundColor: '#4ba360' },
         data: { "label": "Diseño de Interfaz Gráfica de Usuario (Laboratorio)" },
         position
     },
     {
         id: "AN-100",
         type: "input",
-        style: { backgroundColor: 'green' },
+        style: { backgroundColor: '#4ba360' },
         data: { "label": "Metodologías de Desarrollo de Proyectos" },
         position
     },
@@ -218,7 +218,7 @@ export const initialNodes = [
 ];
 
 export const initialEdges = [
-    { id: '1', source: 'II-115', target: 'II-215', type: edgeType, animated: true },
+    { id: '1', source: 'II-115', target: 'II-215N', type: edgeType, animated: true },
     { id: '2', source: 'SC-115', target: 'SC-202', type: edgeType, animated: true },
     { id: '3', source: 'SC-103', target: 'SC-203', type: edgeType, animated: true },
     { id: '4', source: 'SC-103', target: 'SC-204', type: edgeType, animated: true },
